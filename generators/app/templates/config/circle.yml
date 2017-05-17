@@ -9,7 +9,7 @@ machine:
   environment:
     NODE_ENV: test
     AWS_PROFILE: default
-    DESTINATION_BUCKET: [CHANGE THIS]
+    DESTINATION_BUCKET: <%= destinationBucket %>
     DIR: dist/
 
 dependencies:
