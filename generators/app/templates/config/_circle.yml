@@ -1,0 +1,34 @@
+general:
+    branches:
+        only:
+            - master
+
+machine:
+  node:
+    version: 6.1.0
+  environment:
+    NODE_ENV: test
+    AWS_PROFILE: default
+    DESTINATION_BUCKET: [CHANGE THIS]
+    DIR: dist/
+
+dependencies:
+  pre:
+    - sudo apt-get update
+    - sudo apt-get install libfontconfig
+    - sudo apt-get install python-dev --fix-missing
+    - pip install awscli
+    - aws configure set preview.cloudfront true
+  override:
+    - npm install
+
+test:
+  override:
+    - sleep 10
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - npm run build
+      - /bin/bash publish.sh
