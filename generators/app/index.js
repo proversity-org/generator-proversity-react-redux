@@ -74,6 +74,76 @@ module.exports = class extends Generator {
     this._generateConfigFiles(configFiles);
   }
 
+  writing() {
+    this.fs.copyTpl(this.templatePath('src/'), this.destinationPath('src/'))
+  }
+
+  install() {
+    this.npmInstall([
+        'classnames',
+        'isomorphic-fetch',
+        'lodash',
+        'prop-types',
+        'react@15.4.0',
+        'react-async-component',
+        'react-dom@15.4.0',
+        'react-redux@4.4.5',
+        'react-router@2.8.1',
+        'react-router-redux@4.0.6',
+        'redux@3.6.0',
+        'redux-logger',
+        'redux-thunk',
+      ], { 'save': true });
+
+      this.npmInstall([
+        'babel',
+        'babel-core',
+        'babel-eslint',
+        'babel-loader',
+        'babel-plugin-lodash',
+        'babel-polyfill',
+        'babel-preset-env',
+        'babel-preset-react',
+        'core-js',
+        'css-loader',
+        'eslint',
+        'eslint-loader',
+        'eslint-plugin-react',
+        'extract-text-webpack-plugin',
+        'favicons-webpack-plugin',
+        'file-loader',
+        'html-webpack-plugin',
+        'lodash-webpack-plugin',
+        'minimist',
+        'node-sass',
+        'postcss',
+        'postcss-load-config',
+        'postcss-loader',
+        'preload-webpack-plugin',
+        'raw-loader',
+        'react-addons-test-utils',
+        'react-hot-loader@3.0.0-beta.6',
+        'rimraf',
+        'sass-loader',
+        'source-map-loader',
+        'style-loader',
+        'sw-precache-webpack-plugin',
+        'url-loader',
+        'webpack',
+        'webpack-browser-plugin',
+        'webpack-dev-server'
+      ], { 'save-dev': true });
+  }
+
+  end () {
+    var endMessage = `The generator ${chalk.yellow.bold('finish')} the ${chalk.yellow.bold('setup')} of your project.\n\n`;
+    var howToRun =
+      '\To run your project use ' +
+      chalk.yellow.bold('npm start') + '\n\n'
+
+    this.log(yosay(endMessage + howToRun));
+  }
+
   _generateInjectForFile(file) {
     let injectFile = null;
     if (file == 'package.json') {
@@ -91,7 +161,12 @@ module.exports = class extends Generator {
       }
     } else if (file == 'webpack.prod.js') {
       injectFile = {
-        cacheName: this.name
+        cacheName: this.name,
+        sessionKey: this.name
+      }
+    } else if (file == 'webpack.dev.js') {
+      injectFile = {
+        sessionKey: this.name
       }
     }
 
@@ -109,16 +184,5 @@ module.exports = class extends Generator {
 
     this.config.set({'name': this.name});
     })
-  }
-
-  _generateFiles(folder, files, includeParent, includeDot) {
-    const parent = includeParent ? folder : "";
-    const dot = includeDot ? '.' : '';
-    files.map((file) => {
-      this.fs.copyTpl(
-        this.templatePath(`${folder}_${file}`),
-        this.destinationPath(`${parent}${dot}${file}`)
-      );
-    });
   }
 };

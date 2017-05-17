@@ -15,19 +15,11 @@ class AsyncList extends Component {
   constructor(props) {
     super(props)
 
-    this.onSearchTerm = this.onSearchTerm.bind(this)
-    this.clear = this.clear.bind(this)
-    this.searchFocus = this.searchFocus.bind(this)
-    this.searchBlur = this.searchBlur.bind(this)
-
-    this.state = {
-      filter: '',
-      searchFocus: false
-    }
+    this.state = {}
   }
 
   componentDidMount() {
-    if (!getToken())) {
+    if (!getToken()) {
       this.props.dispatch(replace({pathname: '/'}))
     }
   }

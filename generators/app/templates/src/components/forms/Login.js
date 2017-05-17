@@ -1,15 +1,14 @@
 
 'use strict';
 
-import React, { Component } from 'react'
-import PropTypes  from 'prop-types'
+import React from 'react'
 import Button from 'components/utils/Button'
 import Message from 'components/utils/Message'
 import classNames from 'classnames'
 
 import brandSvg from 'static/images/brand.svg'
 
-require('static/scss/login.css')
+require('static/scss/login.scss')
 
 const Login = ({
   username, password, showMessage, messageType, messageText,
@@ -26,9 +25,9 @@ const Login = ({
           />
         }
 
-        <img src={brandSvg} className="brand" />
+        {/* <img src={brandSvg} className="brand" /> */}
 
-        <label htmlFor="inputUsername">Username or email:</label>  
+        <label htmlFor="inputUsername">Username:</label>  
         <input
           type="text"
           placeholder=""

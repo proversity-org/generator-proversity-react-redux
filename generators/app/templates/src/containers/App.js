@@ -4,9 +4,11 @@
 import React, { PropTypes, Component }  from 'react'
 import { bindActionCreators }           from 'redux'
 import { connect }                      from 'react-redux'
-import { isAuthenticated } from 'helpers/session'
+import { isAuthenticated } from 'helpers/Session'
 import AsyncNavBar from 'containers/utils/AsyncNavBar'
 import { AsyncComponentProvider } from 'react-async-component'
+
+require('static/scss/general.scss')
 
 class App extends Component {
   constructor(props) {
@@ -25,11 +27,9 @@ class App extends Component {
             <div className="row">
               {this.props.children}
             </div>
-            <div className="row">
-              <footer role="copyright">
-                <p>&copy; 2013 - 2017 Copyright Proversity.org Ltd</p>
-              </footer>
-            </div>
+            <footer role="copyright">
+              <p>&copy; 2013 - 2017 Copyright Proversity.org Ltd</p>
+            </footer>
           </div>
         </div>
       </AsyncComponentProvider>

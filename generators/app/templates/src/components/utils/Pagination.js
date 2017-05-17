@@ -3,7 +3,7 @@
 
 import React from 'react'
 
-require('static/css/pagination.css')
+require('static/scss/pagination.scss')
 
 const Pagination = ({ currentPage, perPage, total, previousPage, nextPage }) => {
   var currentPageStr = `Page ${currentPage} of ${Math.ceil(total / perPage)}`

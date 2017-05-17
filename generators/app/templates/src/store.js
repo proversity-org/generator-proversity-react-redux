@@ -4,7 +4,7 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import { routerReducer, routerMiddleware } from 'react-router-redux'
 import thunkMiddleware from 'redux-thunk'
-import createLogger from 'redux-logger'
+import { createLogger } from 'redux-logger'
 import rootReducer from 'reducers'
 
 const loggerMiddleware = process.env.NODE_ENV == 'development' ? createLogger() : false

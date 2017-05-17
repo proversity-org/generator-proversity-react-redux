@@ -52,7 +52,7 @@ const devPlugins = [
     'process.env': {
       NODE_ENV: JSON.stringify('development')
     },
-    'BASE_URL': 'http://localhost:3001',
+    'BASE_URL': '"http://localhost:3001"',
     'SESSION_KEY': '"<%= sessionKey %>"'
   })
 ]

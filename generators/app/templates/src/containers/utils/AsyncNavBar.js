@@ -1,10 +1,10 @@
 
 'use strict';
 
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { isAuthenticated } from 'helpers/Session'
-import NavBar from 'components/NavBar'
+import NavBar from 'components/utils/NavBar'
 
 class AsyncNavBar extends Component {
 

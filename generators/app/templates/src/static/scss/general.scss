@@ -54,6 +54,20 @@ textarea {
 
 }
 
+footer[role="copyright"] {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: none;
+
+  p {
+    background: none;
+    color: $black;
+  }
+}
+
 form {
   width: 100%;
 
@@ -228,7 +242,7 @@ header {
   padding: 5px;
 
   a {
-    color: $brand-black-color;
+    color: $black;
     font-size: 14px;
     padding: 5px;
     text-decoration: underline;
@@ -243,7 +257,7 @@ header {
     }
 
     &:hover {
-      color: $brand-main-color;
+      color: $blue;
 
       transition: all .3s ease-out 0s;
       -webkit-transition: all .3s ease-out 0s;
@@ -258,7 +272,7 @@ header {
   padding: 5px;
 
   a {
-    color: $brand-black-color;
+    color: $black;
     padding: 5px;
     text-decoration: none!important;
 
@@ -272,7 +286,7 @@ header {
     }
 
     &:hover {
-      color: $brand-main-color;
+      color: $blue;
 
       transition: all .3s ease-out 0s;
       -webkit-transition: all .3s ease-out 0s;

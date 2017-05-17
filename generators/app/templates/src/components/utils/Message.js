@@ -3,7 +3,7 @@
 
 import React from 'react'
 
-require('static/css/message.css')
+require('static/scss/message.scss')
 
 const Message = ({ type, text, close }) => {
   return (

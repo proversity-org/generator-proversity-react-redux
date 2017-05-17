@@ -22,19 +22,19 @@
 }
 
 .message-success {
-  background: $green-color;
-  color: darken($green-color, 40%);   
+  background: $green;
+  color: darken($green, 40%);   
 }
 
 .message-error {
-  background: $red-color;
-  color: darken($red-color, 40%);
+  background: $red;
+  color: darken($red, 40%);
 }
 
 .dismiss-message-success {
-  color: darken($green-color, 10%);   
+  color: darken($green, 10%);   
 }
 
 .dismiss-message-error {
-  color: darken($red-color, 40%);   
+  color: darken($red, 40%);   
 }

@@ -93,7 +93,7 @@ function receiveRecoverPassword(json) {
 
 export function recoverPassword(payload) {
   return dispatch => {
-    dispatch(requestRecoverPassword(email))
+    dispatch(requestRecoverPassword())
     var url = BASE_URL + 'recover-password'
     return fetch(url, {
       headers: {

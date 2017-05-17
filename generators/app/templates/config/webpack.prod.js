@@ -46,7 +46,7 @@ const prodPlugins = [
     'process.env': {
       NODE_ENV: JSON.stringify('production')
     },
-    'BASE_URL': 'http://localhost:3001',
+    'BASE_URL': '"http://localhost:3001"',
     'SESSION_KEY': '"<%= sessionKey %>"'
   })
 ]

@@ -2,8 +2,9 @@
 'use strict';
 
 import React from 'react'
+import PropTypes from 'prop-types'
 
-require('static/css/buttons.css')
+require('static/scss/button.scss')
 
 const Button = ({ type, action, text, classes, dismiss, toggle, target, iconLeft, iconRight }) => {
   return (

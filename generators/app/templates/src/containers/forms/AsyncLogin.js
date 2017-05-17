@@ -99,9 +99,9 @@ class AsyncLogin extends Component {
     })
 
     return (
-      <div className="row">
+      <div>
         {(()=>{
-          if (isLoggingIn) {
+          if (isAuthenticating) {
             return (
               <RefreshIcon message={'Authenticating ...'}/>
             )
