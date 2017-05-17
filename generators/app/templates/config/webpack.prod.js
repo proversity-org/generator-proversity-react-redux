@@ -45,7 +45,9 @@ const prodPlugins = [
   new webpack.DefinePlugin({
     'process.env': {
       NODE_ENV: JSON.stringify('production')
-    }
+    },
+    'BASE_URL': 'http://localhost:3001',
+    'SESSION_KEY': '"<%= sessionKey %>"'
   })
 ]
 

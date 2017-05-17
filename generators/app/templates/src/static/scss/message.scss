@@ -1,0 +1,40 @@
+
+@import 'variables';
+
+.message {
+  position: relative;
+  margin: 5px 0 20px 0;
+  padding: 15px;
+  text-align: center;
+
+  p {
+    margin: 0;
+  }
+
+  .dismiss-message {
+    position: absolute;
+    top: 20%;
+    right: 20px;
+    font-size: 21px;
+    font-weight: 400;
+    text-decoration: none;
+  }
+}
+
+.message-success {
+  background: $green-color;
+  color: darken($green-color, 40%);   
+}
+
+.message-error {
+  background: $red-color;
+  color: darken($red-color, 40%);
+}
+
+.dismiss-message-success {
+  color: darken($green-color, 10%);   
+}
+
+.dismiss-message-error {
+  color: darken($red-color, 40%);   
+}

@@ -1,0 +1,25 @@
+
+/* Login */
+
+@import 'variables';
+
+.login {
+  position: absolute;
+  display: block;
+  top: 30%;
+  left: 0;
+  text-align: center;
+
+  input {
+    display: block;
+    margin: 0 auto;
+    width: 85%;
+    text-align: center;
+    color: $blue;    
+  }
+
+  .btn {
+    padding: 6px 18px;
+    margin: 15px 0;    
+  }
+}

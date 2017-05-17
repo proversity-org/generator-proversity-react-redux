@@ -9,6 +9,13 @@ const routes = {
   indexRoute: { component: AsyncLogin },
   childRoutes: [
     {
+      path: '/logout',
+      getComponent(location, cb) {
+        System.import('containers/utils/AsyncLogout')
+        .then(module => cb(null, module.default))
+      }
+    },
+    {
       path: '/list',
       getComponent(location, cb) {
         System.import('containers/lists/AsyncList')

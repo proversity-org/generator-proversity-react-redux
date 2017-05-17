@@ -1,0 +1,37 @@
+
+/* Button */
+
+@import 'variables';
+
+.btn {
+      margin: 15px 5px;
+}
+
+.btn-default {
+
+      background: $blue;
+      border: 1px solid $blue;
+      color: $white;
+      transition: all 0.3s;
+
+      &:hover, :focus {
+          background: $white;
+          border: 1px solid $blue;
+          color: $blue;
+          box-shadow: 0 0 14px rgba(6, 169, 225, 0.5);
+      }
+}
+
+.btn-primary {
+
+      background: $mediumGray;
+      border: 1px solid $mediumGray;
+      color: $white;
+      transition: all 0.3s;
+
+      &:hover, :focus {
+          background: $white;
+          border: 1px solid $mediumGray;
+          color: $mediumGray;
+      }
+}

@@ -51,7 +51,9 @@ const devPlugins = [
   new webpack.DefinePlugin({
     'process.env': {
       NODE_ENV: JSON.stringify('development')
-    }
+    },
+    'BASE_URL': 'http://localhost:3001',
+    'SESSION_KEY': '"<%= sessionKey %>"'
   })
 ]
 

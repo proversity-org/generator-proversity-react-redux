@@ -1,0 +1,283 @@
+
+/*
+* General
+*/
+
+@import 'variables';
+
+body {
+  color: $black;
+  font-family: $font-stack;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  color: $blue;
+}
+
+img {  
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  font-weight: normal;
+  margin: 5px 0;
+}
+
+input {
+  margin: 5px 0;
+  border: 1px solid $lightGray;
+  padding: 5px;
+  border-radius: 0;
+  height: 40px;
+
+  &:hover, :focus {
+    border: 1px solid $blue;
+  }
+
+}
+
+textarea {
+  margin: 5px 0;
+  border: 1px solid $lightGray;
+  padding: 5px;
+
+  &:hover, :focus {
+    border: 1px solid $blue;
+  }
+
+}
+
+form {
+  width: 100%;
+
+  label {
+    display: block;
+  }
+
+  input[type="text"], input[type="password"], input[type="email"], textarea {
+    display: block;
+    width: 100%;
+  }
+
+  textarea {
+    height: 30vh;
+  }
+
+  .btn {
+    margin: 15px 5px 15px 0;
+  }
+
+}
+
+header {
+  text-align: center;
+}
+
+[type="radio"] {
+
+  + span {
+    transition: all .3s;
+  }
+
+  &:not(:checked) {
+    position: absolute;
+    left: -9999px;
+  }
+
+  &:checked {
+    position: absolute;
+    left: -9999px;
+  }
+
+  &:not(:checked) + span {
+    position: relative;
+    padding-top: 5px;
+    padding-left: 25px;
+    cursor: pointer;
+  }
+
+  &:checked + span {
+    position: relative;
+    padding-top: 5px;
+    padding-left: 25px;
+    cursor: pointer;
+  }
+
+  &:not(:checked) + span:before {
+    content: '○';
+    position: absolute;
+    left: -4px;
+    top: -18px;
+    font-size: 40px;
+    color: $lightGray;
+    width: 28px;
+    height: 28px;
+    border-radius: 28px;       }
+
+  &:checked + span:before {
+    content: '';
+    position: absolute;
+    left: -4px;
+    top: -18px;
+    font-size: 40px;
+    color: $lightGray;
+    width: 28px;
+    height: 28px;
+    border-radius: 28px;
+  }
+
+  &:not(:checked) + span:after {
+    content: '●';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    top: -18px;
+    left: -1px;
+    font-size: 40px;
+    color: $blue;
+    border-radius: 28px;
+    transition: all .3s;
+  }
+
+  &:checked + span {
+    color: $blue;
+  }
+
+  &:checked + span:after {
+    content: '●';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    top: -18px;
+    left: -1px;
+    font-size: 40px;
+    color: $blue;
+    border-radius: 28px;
+    transition: all .3s;
+  }
+
+  &:not(:checked) + span:after {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  &:checked + span:after {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+
+.table {
+  thead > tr > th {
+    border-bottom: 1px solid $lightGray;
+  }
+
+}
+
+.table-responsive {
+  margin: 15px 0;
+
+  table > tbody {
+    tr {
+      cursor: pointer;
+      transition: all 0.3s;
+
+      th {
+        text-align: center;
+        .glyphicon {
+            color: $blue;
+        }
+      }
+
+      td {
+        a {
+          color: $blue;
+          text-decoration: none;
+          transition: all 0.3s;
+          &:hover, :focus {
+              color: $darkBlue;
+          }
+        }
+
+        .glyphicon {
+          color: $blue;
+        }
+      }
+    }
+
+    tr:nth-of-type(odd):hover {
+      background: $white;
+    }
+
+    tr:nth-of-type(even):hover {
+      background: $lighterGray;
+    }
+  }
+}
+
+.forgot-password-link {
+  margin-top: 5px;
+  padding: 5px;
+
+  a {
+    color: $brand-black-color;
+    font-size: 14px;
+    padding: 5px;
+    text-decoration: underline;
+
+    transition: all .3s ease-out 0s;
+    -webkit-transition: all .3s ease-out 0s;
+    -moz-transition: all .3s ease-out 0s;
+    -o-transition: all .3s ease-out 0s;
+
+    span {
+      font-weight: 700;
+    }
+
+    &:hover {
+      color: $brand-main-color;
+
+      transition: all .3s ease-out 0s;
+      -webkit-transition: all .3s ease-out 0s;
+      -moz-transition: all .3s ease-out 0s;
+      -o-transition: all .3s ease-out 0s;
+    }
+  }
+}
+
+.signup-link {
+  margin-top: 5px;
+  padding: 5px;
+
+  a {
+    color: $brand-black-color;
+    padding: 5px;
+    text-decoration: none!important;
+
+    transition: all .3s ease-out 0s;
+    -webkit-transition: all .3s ease-out 0s;
+    -moz-transition: all .3s ease-out 0s;
+    -o-transition: all .3s ease-out 0s;
+
+    span {
+      font-weight: 700;
+    }
+
+    &:hover {
+      color: $brand-main-color;
+
+      transition: all .3s ease-out 0s;
+      -webkit-transition: all .3s ease-out 0s;
+      -moz-transition: all .3s ease-out 0s;
+      -o-transition: all .3s ease-out 0s;
+    }
+  }
+}

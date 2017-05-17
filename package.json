@@ -1,20 +1,20 @@
 {
-  "name": "generator-react-redux",
+  "name": "generator-proversity-react-redux",
   "version": "1.0.0",
-  "description": "Yeoman React Redux app generator",
+  "description": "Yeoman Proversity React Redux app generator",
   "author": "Jose Antonio Gonzalez <antonio@proversity.org> (https://www.proversity.org)",
   "license": "MIT",
-  "homepage": "https://github.com/proversity-org/react-redux-generator#readme",
+  "homepage": "https://github.com/proversity-org/generator-proversity-react-reduxr#readme",
   "main": "generators/app/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/proversity-org/react-redux-generator.git"
+    "url": "git+https://github.com/proversity-org/generator-proversity-react-redux.git"
   },
   "bugs": {
-    "url": "https://github.com/proversity-org/react-redux-generator/issues"
+    "url": "https://github.com/proversity-org/generator-proversity-react-redux/issues"
   },
   "files": [
     "generators/app"

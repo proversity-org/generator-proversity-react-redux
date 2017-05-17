@@ -1,0 +1,88 @@
+
+/* Navbar */
+
+@import 'variables';
+
+.navbar {
+  border-radius: 0;
+  border-bottom: 1px solid $blue;
+}
+
+.navbar-nav {
+
+  li {
+    vertical-align: middle;
+  }
+
+}
+
+.navbar-default {
+  background: $white;
+}
+
+.navbar-default .navbar-nav {
+  .open {
+    a {
+      color: $black;
+      &:focus, &:hover {
+        background: none;
+        color: $blue;                
+      }
+    }
+  }
+}
+
+.navbar-toggle {
+  margin-top: 10px;
+  border: none;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background: $blue;
+}
+
+.navbar-brand {
+  float: none;
+
+  img {
+    display: inline-block;
+    width: 25%;
+    padding: 10px 0;    
+  }
+}
+
+.navbar-right {
+
+  .dropdown {
+
+    .dropdown-toggle {
+
+      float: right;
+      display: inline-block;
+
+      span {
+
+        img {
+
+          width: 40px;
+          margin: 0;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.dropdown-menu {
+  li {
+    a {
+      &:focus, &:hover {
+
+      }
+    }
+  }
+}

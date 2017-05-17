@@ -17,9 +17,8 @@
     "mocha": true
   },
   "globals": {
-    "HAWKEYE_API_URL": false,
-    "DEFAULT_CATALOGUE_ID": false,
-    "YT": false
+    "BASE_URL": false,
+    "SESSION_KEY": false
   },
   "rules": {
     "comma-dangle": 1,
