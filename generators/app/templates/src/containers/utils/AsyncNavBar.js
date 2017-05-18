@@ -10,11 +10,27 @@ class AsyncNavBar extends Component {
 
   constructor(props) {
     super(props);
+
+    this.onClickItem = this.onClickItem.bind(this)
+    this.setActiveKey = this.setActiveKey.bind(this)
+
+    this.state = {
+      activeKey: this.setActiveKey()
+    }
+  }
+
+  onClickItem(e, value) {
+    e.preventDefault()
+  }
+
+  setActiveKey() {
+    const pathname = this.props.location.pathname
+    return 'example'
   }
 
   render() {
     return (
-      <NavBar location={this.props.location} />
+      <NavBar activeKey={this.state.activeKey} />
     )
   }
 }

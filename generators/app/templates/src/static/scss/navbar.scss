@@ -1,71 +1,251 @@
-
 /* Navbar */
 
 @import 'variables';
 
-.navbar {
-  border-radius: 0;
-  border-bottom: 1px solid $blue;
+.brand-icon {
+  width: 25%;
 }
 
-.navbar-nav {
+.navbar {
 
-  li {
-    vertical-align: middle;
+  min-height: 48px !important;
+
+}
+
+.navbar-brand {
+
+  background: $white;
+  padding: 10px 15px;
+  height: 48px;
+
+  img {
+
+    display: inline-block;
+    width: 125px;
+
   }
 
 }
 
 .navbar-default {
+
   background: $white;
-}
+  border-bottom: 1px solid $blue;
 
-.navbar-default .navbar-nav {
-  .open {
-    a {
-      color: $black;
-      &:focus, &:hover {
-        background: none;
-        color: $blue;                
-      }
+  .navbar-toggle {
+
+    margin-top: 12px;
+    padding: 12px 10px 0;
+    border: none;
+
+    &:hover, &:focus {
+      background: none;    
     }
+
+    .icon-bar {
+      background: $blue;
+    }
+
+    @media screen and (max-width: $iphone6plus-portrait) {
+      padding: 5px 0 0 0 !important;
+    }
+
+    @media screen and (max-width: $iphone6plus-landscape) {
+      padding: 5px 0 0 0 !important;
+    }
+
+    @media screen and (max-width: $tablet-portrait) {
+      display: block !important;
+    }
+
   }
-}
 
-.navbar-toggle {
-  margin-top: 10px;
-  border: none;
-}
+  .navbar-nav {
 
-.navbar-default .navbar-toggle .icon-bar {
-  background: $blue;
-}
+    padding: 13px 0 0 0;
 
-.navbar-brand {
-  float: none;
+    li {
 
-  img {
-    display: inline-block;
-    width: 25%;
-    padding: 10px 0;    
-  }
-}
+      vertical-align: middle;
 
-.navbar-right {
+      a {
 
-  .dropdown {
+        color: $blue;
+        transition: all 0.3s;
+        padding: 16px 15px 14px;
 
-    .dropdown-toggle {
-
-      float: right;
-      display: inline-block;
-
-      span {
+        &:hover, &:focus {
+          color: $darkBlue;
+        }
 
         img {
 
-          width: 40px;
-          margin: 0;
+          display: inline-block;
+          margin: 0 5px 0 0;
+          padding: 0;
+          width: 23px;
+
+        }
+
+        @media screen and (max-width: $iphone6plus-portrait) {
+          padding: 10px 0;
+          background: $white;
+        }
+
+        @media screen and (max-width: $iphone6plus-landscape) {
+          padding: 10px 0;
+          background: $white;
+        }
+
+      }
+
+      @media screen and (max-width: $iphone6plus-portrait) {
+        text-align: center;
+        border-bottom: 1px solid $lightGray;
+      }
+
+      @media screen and (max-width: $iphone6plus-landscape) {
+        text-align: center;
+        border-bottom: 1px solid $lightGray;
+      }
+
+    }
+
+    .active {
+
+      a {
+
+        background: $blue;
+        color: $white;
+
+        &:hover, &:focus {
+
+          background: $blue;
+          color: $white;
+
+        }
+
+        @media screen and (max-width: $iphone6plus-landscape) {
+          background: $white;
+          color: $blue;
+        }
+
+      }
+
+      .dropdown-toggle {
+
+        background: $blue !important;
+        color: $white !important;
+
+      }
+
+    }
+
+    .dropdown {
+
+      .dropdown-toggle {
+
+        background: none;
+        border: none;
+
+        @media screen and (max-width: $iphone6plus-portrait) {
+          padding: 10px 0;
+          text-align: center;
+          background: $white;
+        }
+
+        @media screen and (max-width: $iphone6plus-landscape) {
+          padding: 10px 0;
+          text-align: center;
+          background: $white;
+        }
+
+      }
+
+      .dropdown-menu {
+
+        background: $white !important;
+        margin: 1px 0 0 0;
+        padding: 0;
+        text-align: left;
+        border: none;
+
+        li {
+
+          border-bottom: 1px solid $lightGray;
+
+          &:last-child {
+
+            border: none;
+
+          }
+
+          a {
+
+            background: $white;
+            color: $blue;
+            padding: 10px 10px;
+
+            &:hover, &:focus {
+
+              background: $white;
+              color: $black;
+
+            }
+
+          }
+
+          @media screen and (max-width: $iphone6plus-portrait) {
+            text-align: center;
+          }
+
+          @media screen and (max-width: $iphone6plus-landscape) {
+            text-align: center;
+          }
+
+        }
+
+      }
+
+    }
+
+    @media screen and (max-width: $iphone6plus-portrait) {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 0;
+    }
+
+    @media screen and (max-width: $iphone6plus-landscape) {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 0;
+    }
+
+  }
+
+  #navbar {
+
+    .navbar-nav {
+
+      .active {
+
+        &:after {
+
+          content:'';
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          width: 0;
+          height: 0;
+          border-top: solid 15px $blue;
+          border-left: solid 15px transparent;
+          border-right: solid 15px transparent;
+
+          @media screen and (max-width: $iphone6plus-landscape) {
+            border: none;
+          }
 
         }
 
@@ -75,14 +255,128 @@
 
   }
 
+  .navbar-collapse {
+
+    @media screen and (max-width: $iphone6plus-landscape) {
+
+      background: $blue;
+      border-top: 1px solid $white;
+      padding-top: 1px;
+
+    }
+
+  }
+
+  .navbar-brand {
+
+    &:hover, &:focus {
+
+      background: $white;
+
+    }
+
+  }
+
 }
 
-.dropdown-menu {
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+  background: none;
+
+  @media screen and (max-width: $iphone6plus-portrait) {
+    color: $white;
+  }
+
+  @media screen and (max-width: $iphone6plus-landscape) {
+    color: $white;
+  }
+}
+
+.navbar-nav {
+
+  padding: 15px 0;
+  margin-top: -15px;
+  margin-bottom: -15px;
+
   li {
+
+    img {
+
+      display: inline-block;
+      padding: 6px 0;
+
+    }
+
     a {
-      &:focus, &:hover {
+
+      .fa {
+
+        font-size: 1.3em;
+        margin: 0 5px 0 0;
 
       }
+
     }
+
   }
+
+  .open {
+
+    a {
+
+      background: none;
+      color: $blue;
+
+      &:hover, &:focus {
+
+        background: none;
+        color: $blue;
+
+      }
+
+    }
+
+  }
+
+}
+
+.navbar-right {
+
+  li {
+
+    border: none !important;
+
+  }
+
+  .dropdown {
+
+    min-width: 1px;
+
+    .dropdown-menu {
+
+      width: 100%;
+
+      li {
+
+        a {
+
+          padding: 5px 0 5px 10px;
+
+          &:hover, &:focus {
+
+            color: $white;
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  @media screen and (max-width: $iphone6plus-landscape) {
+    display: none;
+  }
+
 }
